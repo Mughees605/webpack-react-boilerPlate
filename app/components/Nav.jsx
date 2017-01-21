@@ -8,6 +8,7 @@ var Nav = React.createClass({
                 <div className="top-bar-left">
 
                     <ul className="menu">
+                    <li className= "menu-text">React Weather App</li>
                         <li><IndexLink to="/" activeClassName="active" activeStyle={{ fontWeight: 'bold' }}>Get Weather</IndexLink></li>
                         <li><Link to="/About" activeClassName="active" activeStyle={{ fontWeight: 'bold' }}>About Page</Link></li>
                         <li><Link to="/Example" activeClassName="active" activeStyle={{ fontWeight: 'bold' }}>Example Page</Link></li>
@@ -18,6 +19,7 @@ var Nav = React.createClass({
                 <div className="top-bar-right">
                     <form onSubmit={this.onSearch}>
                         <ul className="menu">
+                        
                             <li>
                                 <input type="search" placeholder="Search Weather" />
                             </li>

@@ -24928,11 +24928,14 @@
 	            null,
 	            React.createElement(Nav, null),
 	            React.createElement(
-	                "h2",
-	                null,
-	                "Main component"
-	            ),
-	            this.props.children
+	                "div",
+	                { className: "row" },
+	                React.createElement(
+	                    "div",
+	                    { className: "columns medium-6 large-4 small-centered" },
+	                    this.props.children
+	                )
+	            )
 	        );
 	    }
 	});
@@ -24963,6 +24966,11 @@
 	                React.createElement(
 	                    'ul',
 	                    { className: 'menu' },
+	                    React.createElement(
+	                        'li',
+	                        { className: 'menu-text' },
+	                        'React Weather App'
+	                    ),
 	                    React.createElement(
 	                        'li',
 	                        null,
@@ -25081,7 +25089,7 @@
 	                    'Fetching Weather....'
 	                );
 	            } else if (temp && location) {
-	                return React.createElement(WeatherMessage, { location: this.state.location, temp: this.state.temp });
+	                return React.createElement(WeatherMessage, { location: location, temp: temp });
 	            }
 	        }
 	        return React.createElement(
@@ -25092,7 +25100,9 @@
 	                null,
 	                'Get Weather'
 	            ),
-	            React.createElement(WeatherForm, { onSearch: this.handleSearch })
+	            React.createElement(WeatherForm, { onSearch: this.handleSearch }),
+	            renderMessage(),
+	            ';'
 	        );
 	    }
 	});
@@ -25150,11 +25160,7 @@
 	            "form",
 	            { onSubmit: this.onFormSubmit },
 	            React.createElement("input", { type: "text", ref: "loc" }),
-	            React.createElement(
-	                "button",
-	                null,
-	                "Click Me"
-	            )
+	            React.createElement("input", { type: "submit", value: "Get Weather", className: "button" })
 	        );
 	    }
 	});
@@ -26701,21 +26707,51 @@
 /* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(8);
 
+	var _require = __webpack_require__(166),
+	    Link = _require.Link;
+
 	var Example = React.createClass({
-	    displayName: 'Example',
+	    displayName: "Example",
 
 	    render: function render() {
 	        return React.createElement(
-	            'div',
+	            "div",
 	            null,
 	            React.createElement(
-	                'h3',
+	                "h1",
+	                { className: "text-center" },
+	                "Examples page"
+	            ),
+	            React.createElement(
+	                "p",
 	                null,
-	                'Examples page'
+	                "Here are few examples"
+	            ),
+	            React.createElement(
+	                "ol",
+	                null,
+	                React.createElement(
+	                    "li",
+	                    null,
+	                    React.createElement(
+	                        Link,
+	                        { to: "/?location=karachi" },
+	                        "Karachi, PK"
+	                    )
+	                ),
+	                React.createElement(
+	                    "li",
+	                    null,
+	                    React.createElement(
+	                        Link,
+	                        { to: "/?location=london" },
+	                        "London, UK"
+	                    )
+	                )
 	            )
 	        );
 	    }

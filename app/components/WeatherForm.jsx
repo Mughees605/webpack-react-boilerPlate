@@ -13,9 +13,9 @@ var WeatherForm = React.createClass({
         return (
             <form onSubmit={this.onFormSubmit}>
                 <input type="text" ref="loc" />
-                <button>Click Me</button>
+                <input type="submit" value = "Get Weather" className = "button"/>
             </form>
-        )
+        );
     }
-});
-module.exports = WeatherForm
+})
+module.exports = WeatherForm;
