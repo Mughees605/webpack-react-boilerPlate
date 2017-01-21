@@ -10,11 +10,11 @@ var Weather = React.createClass({
     }
     },
     handleSearch:function(location){
-    this.setState({
-        location:location,
-        temp : 77
-    })
-    },
+    // this.setState({
+    //     location:location,
+    //     temp : 77
+    // })
+     },
     render:function(){
        return (
            <div>

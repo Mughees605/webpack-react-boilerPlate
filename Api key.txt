@@ -1,0 +1,2 @@
+d187534c1efa363441ac1e9e4548e800
+http://api.openweathermap.org/data/2.5/weather?q=karachi,uk&appid=d187534c1efa363441ac1e9e4548e800

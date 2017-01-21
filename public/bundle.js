@@ -25004,9 +25004,13 @@
 	var WeatherForm = React.createClass({
 	    displayName: "WeatherForm",
 
-	    onFormSubmit: function onFormSubmit() {
+	    onFormSubmit: function onFormSubmit(e) {
+	        e.preventDefault();
 	        var location = this.refs.loc.value;
-	        this.props.onSearch(location);
+	        if (location.length > 0) {
+	            this.refs.loc.value = "";
+	            this.props.onSearch(location);
+	        }
 	    },
 	    render: function render() {
 	        return React.createElement(
