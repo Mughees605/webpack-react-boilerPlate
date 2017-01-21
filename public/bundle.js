@@ -25096,8 +25096,8 @@
 	            'div',
 	            null,
 	            React.createElement(
-	                'h3',
-	                null,
+	                'h1',
+	                { className: 'text-center' },
 	                'Get Weather'
 	            ),
 	            React.createElement(WeatherForm, { onSearch: this.handleSearch }),
@@ -25112,23 +25112,23 @@
 /* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(8);
 
 	var WeatherMessage = React.createClass({
-	    displayName: 'WeatherMessage',
+	    displayName: "WeatherMessage",
 
 	    render: function render() {
 	        return React.createElement(
-	            'div',
+	            "div",
 	            null,
 	            React.createElement(
-	                'h3',
-	                null,
-	                'Its ',
+	                "h3",
+	                { className: "text-center" },
+	                "Its ",
 	                this.props.temp,
-	                ' in ',
+	                " in ",
 	                this.props.location
 	            )
 	        );
@@ -25160,7 +25160,7 @@
 	            "form",
 	            { onSubmit: this.onFormSubmit },
 	            React.createElement("input", { type: "text", ref: "loc" }),
-	            React.createElement("input", { type: "submit", value: "Get Weather", className: "button" })
+	            React.createElement("input", { type: "submit", value: "Get Weather", className: "button expanded hollow" })
 	        );
 	    }
 	});
@@ -26686,18 +26686,27 @@
 /* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(8);
 
 	var About = React.createClass({
-	    displayName: 'About',
+	    displayName: "About",
 
 	    render: function render() {
 	        return React.createElement(
-	            'p',
+	            "div",
 	            null,
-	            'This is the about page'
+	            React.createElement(
+	                "h1",
+	                { className: "text-center" },
+	                "About Page"
+	            ),
+	            React.createElement(
+	                "p",
+	                { className: "text-center" },
+	                "This is my first application on React."
+	            )
 	        );
 	    }
 	});
