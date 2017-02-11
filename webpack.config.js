@@ -2,7 +2,7 @@ var webpack = require("webpack");
 module.exports = {
   entry: [
     "script!jquery/dist/jquery.min.js",
-    "script!foundation-sites/dist/foundation.min.js",
+    'style!css!bootstrap/dist/css/bootstrap.css',
     "./app/app.jsx"
   ],
   externals:{
@@ -21,7 +21,11 @@ module.exports = {
   resolve: {
     root: __dirname,
     alias: { //adding modules
-      Main:'app/components/main.jsx',
+      Main:'app/components/Modal.jsx',
+      Cart:'app/components/Cart.jsx',
+      Checkout:'app/components/Checkout.jsx',
+      Product:'app/components/Product.jsx',
+
       applicationStyles:"app/styles/style.css"
     },
     extensions: ['', '.js', '.jsx']
